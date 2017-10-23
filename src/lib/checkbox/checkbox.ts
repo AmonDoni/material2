@@ -60,11 +60,11 @@ export const MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR: any = {
 export enum TransitionCheckState {
   /** The initial state of the component before any user interaction. */
   Init,
-  /** The state representing the component when it's becoming checked. */
+    /** The state representing the component when it's becoming checked. */
   Checked,
-  /** The state representing the component when it's becoming unchecked. */
+    /** The state representing the component when it's becoming unchecked. */
   Unchecked,
-  /** The state representing the component when it's becoming indeterminate. */
+    /** The state representing the component when it's becoming indeterminate. */
   Indeterminate
 }
 
@@ -316,7 +316,7 @@ export class MatCheckbox extends _MatCheckboxMixinBase implements ControlValueAc
     }
 
     this._currentAnimationClass = this._getAnimationClassForCheckStateTransition(
-        oldState, newState);
+      oldState, newState);
     this._currentCheckState = newState;
 
     if (this._currentAnimationClass.length > 0) {
@@ -400,7 +400,7 @@ export class MatCheckbox extends _MatCheckboxMixinBase implements ControlValueAc
   }
 
   private _getAnimationClassForCheckStateTransition(
-      oldState: TransitionCheckState, newState: TransitionCheckState): string {
+    oldState: TransitionCheckState, newState: TransitionCheckState): string {
     let animSuffix: string = '';
 
     switch (oldState) {
@@ -417,15 +417,15 @@ export class MatCheckbox extends _MatCheckboxMixinBase implements ControlValueAc
         break;
       case TransitionCheckState.Unchecked:
         animSuffix = newState === TransitionCheckState.Checked ?
-            'unchecked-checked' : 'unchecked-indeterminate';
+          'unchecked-checked' : 'unchecked-indeterminate';
         break;
       case TransitionCheckState.Checked:
         animSuffix = newState === TransitionCheckState.Unchecked ?
-            'checked-unchecked' : 'checked-indeterminate';
+          'checked-unchecked' : 'checked-indeterminate';
         break;
       case TransitionCheckState.Indeterminate:
         animSuffix = newState === TransitionCheckState.Checked ?
-            'indeterminate-checked' : 'indeterminate-unchecked';
+          'indeterminate-checked' : 'indeterminate-unchecked';
         break;
     }
 

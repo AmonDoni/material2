@@ -41,6 +41,8 @@ import {ToolbarDemo} from '../toolbar/toolbar-demo';
 import {TooltipDemo} from '../tooltip/tooltip-demo';
 import {TypographyDemo} from '../typography/typography-demo';
 import {DemoApp, Home} from './demo-app';
+import {SimpleTreeDemo} from '../tree/simple-tree-demo';
+import {NestedTreeDemo} from '../tree/nested-tree-demo';
 
 export const DEMO_APP_ROUTES: Routes = [
   {path: '', component: DemoApp, children: [
@@ -81,6 +83,8 @@ export const DEMO_APP_ROUTES: Routes = [
     {path: 'tabs', component: TabsDemo, children: TABS_DEMO_ROUTES},
     {path: 'toolbar', component: ToolbarDemo},
     {path: 'tooltip', component: TooltipDemo},
+  {path: 'simple-tree', component: SimpleTreeDemo},
+  {path: 'nested-tree', component: NestedTreeDemo},
     {path: 'typography', component: TypographyDemo},
     {path: 'expansion', component: ExpansionDemo},
     {path: 'stepper', component: StepperDemo},
